@@ -1,0 +1,15 @@
+<parameters>
+	<code-build-date>Jun 15 2010</code-build-date>
+	<corpus>
+		<document-base>1</document-base>
+		<frequent-terms>0</frequent-terms>
+		<maximum-document>7</maximum-document>
+		<total-documents>6</total-documents>
+		<total-terms>193</total-terms>
+		<unique-terms>103</unique-terms>
+	</corpus>
+	<fields></fields>
+	<indri-distribution>Indri development release 2.12</indri-distribution>
+	<type>DiskIndex</type>
+</parameters>
+

@@ -1,0 +1,23 @@
+B.15. 	Prosedur Penghentian Studi Mahasiswa (Drop Out/DO)
+a.	Uraian Singkat
+Prosedur yang mengatur proses penghentian studi Mahasiswa dengan alasan tertentu
+
+b.	Penanggung Jawab Prosedur
+•	Dekan/ wakil dekan akademik (WDA)
+
+c.	Tujuan
+Menghasilkan aturan  yang sistematis mengenai proses penghentian studi mahasiswa
+
+d.	Kriteria dan Standar
+•	Surat rekomendasi dari direktorat pendidikan
+•	Surat Keputusan wakil rektor bidang akademik  dan kemahasiswaan (WRAM)
+
+e.	Form
+Tidak ada
+f.	Langkah-langkah pelaksanaan
+•	Dekan/WDA menerima surat rekomendasi perihal penghentian studi mahasiswa dari direktorat pendidikan.
+•	Dekan/WDA meneruskan surat rekomendasi perihal penghentian studi mahasiswa kepada program studi, selanjutnya prodi memanggil dosen wali untuk berkonsultasi perihal kasus mahasiswa. 
+•	Program studi menerima rekomendasi dari dosen wali, kemudian meneruskan rekomendasi kepada dekan/WDA.
+•	Dekan/WDA yang menerima rekomendasi dari prodi dan dosen wali membuat surat persetujuan penghentian studi mahasiswa dan mengirimkan kepada direktorat pendidikan.
+•	Direktorat pendidikan menerbitkan surat rekomendasi penghentian studi mahasiswa yang dikirimkan kepada WRAM.
+•	WRAM menerbitkan SK DO dengan tembusan dekan/WDA, direktorat pendidikan dan kaprodi.

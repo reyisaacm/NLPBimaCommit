@@ -1,0 +1,58 @@
+C.4.	Prosedur Pendaftaran dan Penyelenggaraan Sidang Tugas Akhir II
+a.	Uraian Singkat
+Prosedur pendaftaran dan penyelenggaraan sidang akhir adalah suatu prosedur yang mengatur pelaksanaan sidang tugas akhir guna menentukan kelulusan mahasiswa dari studinya.
+b.	Penanggung Jawab Prosedur
+Ketua program studi (Kaprodi)
+c.	Tujuan
+Menghasilkan satu alur pola yang terstrukstur dalam proses kelulusan mahasiswa
+d.	Kriteria dan Standar
+Kriteria dan standar pendaftaran dan pelaksanaan sidang TA II untuk informatika
+•	Formulir usulan sidang tugas akhir (TA) II telah disetujui pembimbing TA dan dilengkapi dengan draft laporan TA serta kartu bimbingan TA yang menyatakan bahwa mahasiswa tersebut telah melakukan bimbingan minimal dua kali sejak seminar TA II.
+•	Jika jumlah kehadiran seminar TA II mahasiswa TA lebih dari dua kali, permohonan sidang akan dilaporkan ke dosen TA II untuk dijadwalkan termasuk penentuan tim sidang TA.
+•	Sidang TA II bersifat tertutup, hanya dihadiri oleh tim sidang yaitu ketua sidang, sekertaris sidang, dan anggota sidang lainnya. Sidang TA II dilakukan selama 90 menit dengan pembukaan ketua sidang selama dua menit, presentasi dan demo oleh mahasiswa TA selama 20 menit, pertanyaan/sanggahan dari dua penguji selama 60 menit (satu orang penguji masing-masing selama 30 menit yang terdiri dari tiga hingga empat pertanyaan), rapat penilaian selama lima menit, penutup pembacaan berita acara selama tiga menit.
+•	Nilai akhir TA II ditentukan oleh tim sidang berdasarkan rapat penilaian tim sidang.
+•	Mahasiswa dapat dinyatakan lulus atau lulus bersyarat dengan nilai: A, AB, B, BC, C.
+
+Kriteria dan standar pendaftaran dan pelaksanaan sidang TA II untuk elektro
+•	Formulir usulan sidang TA II telah disetujui pembimbing TA dan dilengkapi dengan draft laporan TA.
+•	Sidang TA II bersifat tertutup, hanya dihadiri oleh tim sidang yaitu ketua sidang, sekertaris sidang, dan anggota sidang lainnya.
+•	Nilai sidang TA II ditentukan oleh tim sidang berdasarkan rapat penilaian tim sidang.
+•	Mahasiswa dapat dinyatakan lulus atau lulus bersyarat dengan nilai: A, AB, B, BC, C.
+
+
+
+Kriteria dan standar penjadwalan sidang TA II untuk informatika
+•	Setelah batas akhir pendaftaran sidang TA II, dosen TA II akan menerima daftar mahasiswa TA yang telah mendaftar sidang TA II dari TU. Daftar ini telah dilengkapi usulan waktu dari pembimbing dan checklist semua persyaratan sidang TA II untuk setiap mahasiswa.
+•	Jika tidak ada masalah, dosen TA II akan mengumumkan daftar tersebut kepada para calon dosen penguji sidang tanpa mencantumkan nama mahasiswa TA dan pembimbing TA agar pemilihan dilakukan berdasarkan ketertarikan terhadp topik TA atau usulan waktu pembimbingan TA.
+•	Setiap dosen dapat mendaftarkan namanya sebagai penguji sidang dari beberapa mahasiswa TA. Jumlah minimal mahasiswa yang harus dipilih ditentukan oleh dosen TA berdasarkan jumlah mahasiswa TA yang mendaftar sidang.
+•	Jadwal sidang TA II diumumkan paling lambat dua hari kerja sebelum sidang pertama dilakukan oleh para dosen pembimbing TA, penguji TA, dan mahasiswa TA.
+
+Kriteria dan standar penjadwalan sidang TA II untuk elektro
+•	Dosen TA II mengisi formulir kesediaan menguji.
+•	Tim sidang tugas akhir (STA) menentukan jadwal sidang TA II dengan menyesuaikan waktu sidang dengan kesediaan dosen penguji.
+•	Pada kasus tertentu apabila pada poin 2 sub bab d.4 tidak memungkinkan dilakukan, seperti kasus jadwal sidang yang bentrok, mahasiswa dimungkinkan untuk mencari dosen penguji sendiri yang jadwalnya dapat disesuaikan dengan mahasiswa tersebut.
+
+e.	Form dan Standar Penulisan
+•	FPTA 01 Formulir Pendaftaran Tugas Akhir II
+•	FSTA 01 Formulir Penilaian Pelaksanaan Bimbingan Tugas Akhir II
+•	FSTA 02 Formulir Penilaian Pelaksanaan Sidang  Tugas Akhir II
+•	FSTA 03 Formulir Rekapitulasi Nilai Akhir Pelaksanaan Tugas Akhir II
+•	FSTA 04 Formulir Berita Acara Pelaksanaan Sidang Tugas Akhir II
+•	FSTA 05 Lampiran Berita Acara Pelaksanaan Sidang  Tugas Akhir II
+•	FDHS 01 Daftar Hadir Sidang TA II
+•	Surat Tugas Menguji Sidang Tugas Akhir
+
+f.	Langkah-langkah Pelaksanaan
+•	Mahasiswa mengisi formulir pendaftaran sidang TA II.
+•	Dosen pembimbing menyetujui dan menandatangani formulir pendaftaran sidang tugas akhir II.
+•	Mahasiswa menyerahkan formulir pendaftaran sidang tugas akhir II dilengkapi dengan draft TA yang telah disetujui pembimbing kepada TU.
+•	TU menerima formulir pendaftaran sidang tugas akhir II dan draft TA II.
+•	TU memeriksa segala persyaratan yang harus dipenuhi mahasiswa untuk dapat melakukan sidang TA II.
+•	Tim STA melakukan penjadwalan untuk sidang TA II.
+•	TU membuat surat tugas menguji untuk penguji berdasarkan perintah Kaprodi.
+•	TU menyerahkan draft TA II mahasiswa dan surat tugas menguji kepada tim penguji
+•	Tim penguji menerima draft TA II dan surat tugas untuk menguji mahasiswa.
+•	Mahasiswa, dosen penguji, dan dosen pembimbing mengikuti pelaksanaan sidang TA II sesuai dengan peran masing-masing yaitu dosen penguji menguji mahasiswa, dosen pembimbing mendampingi mahasiswa bimbingan, dan mahasiswa diuji.
+•	Tim penguji melakukan rapat penilaian tim sidang.
+•	Tim penguji memasukkan nilai ke formulir penilaian sidang tugas akhir II.
+•	Mahasiswa mendapatkan nilai sidang TA II.

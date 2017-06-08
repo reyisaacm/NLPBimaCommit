@@ -1,0 +1,23 @@
+B.1.	Prosedur Perancangan Satuan Acara Perkuliahan (SAP)
+a.	Uraian Singkat
+Prosedur perancangan silabus merupakan prosedur yang mengatur penyusunan silabus dari suatu mata kuliah yang terdiri dari perumusan learning outcome, isi pokok bahasan dan alokasi waktunya, referensi yang digunakan serta metode evaluasi yang digunakan.
+b.	Penanggung Jawab Prosedur
+Tim perancangan kurikulum
+c.	Tujuan
+Menghasilkan silabus yang merupakan penjabaran dari kurikulum setiap program studi di lingkungan Sekolah Teknik Elektro dan Informatika dalam rangka menunjang program outcome
+d.	Kriteria dan Standar
+•	Learning outcome merupakan penjabaran dari program outcome
+•	Isi pokok bahasan mengandung unsur-unsur knowledge (pengetahuan), skill (keterampilan) dan attitude (sikap) untuk mencapai learning outcome
+•	Beban proses belajar mengajar yang dituntut dari dosen dan mahasiswa untuk setiap pokok isi bahasan harus sesuai dengan alokasi waktu
+•	Sumber referensi yang digunakan harus up to date
+
+e.	Form dan Standar Penulisan
+•	SAP-01 Form Satuan Acara Perkuliahan
+•	SAP-02 Form Rancangan Silabus Mata Kuliah
+
+f.	Langkah-langkah Pelaksanaan
+•	Dekan fakultas membentuk tim penyusun satuan acara perkuliahan (SAP) yang terdiri dari dosen-dosen di setiap program studi yang ditetapkan melalui SK Dekan.
+•	Tim penyusun SAP menyusun format standar penyusunan silabus dan menyerahkannya kepada setiap dosen mata kuliah.
+•	Setiap dosen pembina mata kuliah mengisi formulir silabus dalam waktu maksimal 2 minggu dan menyerahkannya kepada tim penyusun SAP.
+•	Tim penyusun SAP membahas dan mengevaluasi formulir silabus yang sudah diisi dan disempurnakan jika diperlukan.
+•	Rumusan silabus seluruh mata kuliah dibukukan dan diserahkan kepada dekan. 

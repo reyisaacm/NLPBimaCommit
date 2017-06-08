@@ -1,0 +1,29 @@
+A.8.	Prosedur Perubahan Rencana Studi (PRS)
+a.	Uraian Singkat
+Prosedur perubahan rencana studi merupakan prosedur yang mengatur perubahan rencana studi mahasiswa selama masa perwalian dan pasca masa perwalian
+
+b.	Penanggung Jawab Prosedur
+Program Studi (Prodi).
+
+c.	Tujuan
+Mengatur administrasi pelaksanaan perubahan rencana studi mahasiswa pada saat masa perwalian dan pasca masa perwalian. 
+
+d.	Kriteria dan Standar
+•	Adanya pengumuman pelaksanaan perubahan rencana studi mahasiswa dari direktorat pendidikan ITB (Ditdik ITB).
+•	Dosen wali melakukan evaluasi dan menyetujui perubahan rencana studi mahasiswa.
+•	Kepala program studi melakukan persetujuan perubahan rencana studi mahasiswa, jika dosen wali belum menyetujui perubahan rencana studi mahasiswa dan masa perwalian telah lewat.
+ 
+e.	Form
+Kartu Studi Mahasiswa
+
+f.	Langkah-langkah Pelaksanaan
+•	Ditdik ITB mengumumkan pelaksanaan Perubahan Rencana Studi (PRS).
+•	Kepala Sub Bagian Akademik (Kasubbag akad) menerima informasi tentang pelaksanaan perubahan rencana studi (PRS).
+•	Kepala Program Studi (Kaprodi) melalui tata usaha prodi menyampaikan informasi PRS kepada mahasiswa.
+•	Mahasiswa menerima informasi tentang PRS.
+•	Mahasiswa melakukan entry data PRS secara online.
+•	Dosen Wali melakukan evaluasi PRS yang diajukan oleh mahasiswa.
+•	Mahasiswa melakukan entri data PRS kembali, jika Dosen Wali tidak menyetujui PRS yang diajukan.
+•	Jika Dosen Wali telah menyetujui PRS yang diajukan oleh mahasiswa, maka selanjutnya KSM PRS dan formulir perwalian mahasiswa akan diserahkan ke Ditdik ITB.
+•	Jika waktu perwalian telah habis, sedangkan dosen wali (karena satu dan lain hal yang bersifat non-teknis) belum juga menyetujui PRS yang diajukan mahasiswa, maka kaprodi akan mengambil alih mengenai persetujuan PRS tersebut.
+•	Ditdik ITB menyerahkan KSM hasil PRS ke mahasiswa.

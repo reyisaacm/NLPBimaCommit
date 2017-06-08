@@ -1,0 +1,24 @@
+B.3.	Prosedur Daftar Peserta Kelas
+a.	Uraian Singkat
+Prosedur daftar peserta kelas merupakan prosedur untuk menentukan daftar akhir peserta dari suatu kelas yang diselenggarakan.
+b.	Penanggung Jawab Prosedur
+Wakil dekan akademik (WDA)
+c.	Tujuan
+Menentukan pencetakan daftar nilai akhir (DNA) matakuliah yang diselenggarakan, dan berita acara daftar peserta kelas (DPK).
+d.	Kriteria dan Standar
+Absensi pelaksanaan perkuliahan.
+e.	Form
+•	Form konfirmasi persiapan cetak DNA (koreksi DPK final).
+o	Status akhir kelas dengan peserta kurang dari 5 (lima)
+o	Daftar kelas yang dibatalkan dan pengalihan mahasiswa
+o	Status akhir mahasiswa : unconfirmed.
+o	Lembar konfirmasi data DNA siap cetak final.
+•	Berita acara kelas
+
+f.	Langkah-langkah Pelaksanaan
+•	WDA menerima email dari staf  Ditdik tentang pemberitahuan pembukaan situs DPK untuk diteruskan kepada kasubag akademik dan kemahasiswaan, yang selanjutnya akan ditindaklanjuti oleh tata usaha program studi (TU prodi).
+•	TU prodi akan menyusun DPK berdasarkan absensi perkuliahan dan data yang menyatakan jadi tidaknya penyelenggaraan matakuliah yang telah ditawarkan sebelumnya dalam pembukaan kelas.
+•	TU prodi menyampaikan berita acara DPK ke kasubag akademik dan kemahasiswaan.
+•	Kasubag akademik dan kemahasiswaan menyampaikan berita acara DPK dan lembar konfirmasi persiapan cetak DNA ke WDA.
+•	WDA menandatangani lembar konfirmasi persiapan cetak DNA.
+•	Ditdik menerima berita acara DPK dari prodi.

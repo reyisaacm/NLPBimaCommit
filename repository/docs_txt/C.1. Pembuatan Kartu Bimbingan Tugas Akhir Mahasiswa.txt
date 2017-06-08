@@ -1,0 +1,28 @@
+C.1.	Pembuatan Kartu Bimbingan Tugas Akhir Mahasiswa
+a.	Uraian Singkat
+Prosedur ini adalah prosedur untuk pelaksanaan proses pembuatan kartu bimbingan tugas akhir mahasiswa.
+b.	Penanggung Jawab Prosedur
+Tata usaha akademik
+c.	Tujuan
+Memberikan informasi mengenai alur prosedur pembuatan kartu bimbingan kepada mahasiswa yang akan mengikuti tugas akhir.
+d.	Kriteria 
+Telah mengambil matakuliah tugas akhir
+e.	Form dan Standar Penulisan
+•	Daftar topik dari calon pembimbing
+•	Daftar list mahasiswa yang mengikuti tugas akhir
+•	SK Pembimbing
+
+f.	Langkah-langkah Pelksanaan
+•	Pihak tim tugas akhir terlebih dahulu meminta list topik tugas akhir kepada setiap dosen sebagai calon pembimbing mahasiswa.
+•	Kemudian dosen selaku calon pembing membuat daftar topik tugas akhir yang kemudian diserahkan ke tim tugas akhir.
+•	Tim tugas akhir mengecek topik tugas akhir dan selanjutnya memberikan ke mahasiswa yang akan melakukan tugas akhir.
+•	Mahasiswa menerima list topik tugas akhir dan menentukan topik tugas akhir yang telah diberikan.
+•	Setelah mahasiswa memilih topik tugas akhir kemudian diserahkan ke tim tugas akhir untuk selanjutnya diberikan ke calon pembing.
+•	Calon pembimbing menentukan mahasiswa yang akan dibimbing kemudian membuat daftar list mahasiswa tersebut.
+•	Selanjutnya calon pembimbing menyerahkan daftar list tersebut ke tim tugas akhir.
+•	Tim tugas akhir membuat list yang berisikan nama mahasiswa dan nama calon pembimbing untuk kemudian diserahkan ke pihak tata usaha.
+•	Pihak tata usaha memprosesnya dengan mempersiapkan SK pembimbing yang selanjutnya diserahkan ke kaprodi untuk disahkan.
+•	Kaprodi menerima SK tersebut dan menandatanganinya untuk kemudian diserahkan kembali ke tata usaha.
+•	Pihak tata usaha selanjutnya membuat daftar list mahasiswa yang mengikuti tugas akhir beserta nama dosen pembimbing.
+•	Pihak tata usaha kemudian membuat kartu bimbingan yang selanjutnya diserahkan kepada mahasiswa.
+•	Mahasiswa mengambil kartu bimbingan ke tata usaha dan selanjutnya mengikuti proses bimbingan dengan dosen pembimbing yang telah ditunjuk.

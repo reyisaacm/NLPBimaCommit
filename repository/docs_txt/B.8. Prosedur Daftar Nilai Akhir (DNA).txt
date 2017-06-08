@@ -1,0 +1,19 @@
+B.8.	Prosedur Daftar Nilai Akhir (DNA)
+a.	Uraian Singkat
+Prosedur Daftar Nilai Akhir (DNA) adalah suatu prosedur yang mengatur tatacara upload DNA sampai dengan penandatanganan oleh dosen.
+b.	Penanggung Jawab Prosedur
+Program studi (Prodi)
+c.	Tujuan
+Untuk memudahkan dosen dalam memproses DNA.
+d.	Kriteria dan Standar
+Berita acara DPK (Daftar Peserta Kelas)
+e.	Form
+•	Lembar verifikasi DNA
+•	Daftar nilai akhir (DNA)
+
+f.	Langkah-langkah Pelaksanaan
+•	Berdasarkan berita acara DPK yang diterima ditdik dari kasubag akademik dan kemahasiswaan, maka ditdik akan menyiapkan basisdata untuk DNA.
+•	Ditdik mengirimkan email ke kasubag akademik dan kemahasiswaan untuk memberitahukan pembukaan situs DNA, selanjutnya email pemberitahuan tersebut akan diteruskan kepada TU prodi.
+•	TU Prodi akan melakukan upload DNA berdasarkan daftar nilai yang di-entry oleh dosen.
+•	TU Prodi mencetak DNA yang telah di-upload untuk kemudian diverikasi dan ditandatangani oleh masing-masing dosen.
+•	Berita acara verifikasi DNA yang telah diditandatangai dikirim ke kasubag akademik dan kemahasiswaan untuk direkap dan kemudian dikirim ke ditdik.

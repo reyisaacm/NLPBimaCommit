@@ -1,0 +1,19 @@
+A.5	Prosedur Perwalian Online
+a.	Uraian Singkat
+Prosedur ini mengatur perwalian online.
+b.	Penanggung Jawab Prosedur
+Ketua program studi
+c.	Tujuan
+Mahasiswa memilih mata kuliah sesuai dengan kurikulum STEI dan kemampuannya. 
+d.	Kriteria dan Standar
+•	Kurikulum STEI yang berlaku.
+•	Daftar nilai akhir (DNA) semester sebelumnya.
+
+e.	Form dan Standar Penulisan
+Tidak ada
+f.	Langkah-langkah Pelaksanaan
+•	Mahasiswa login ke situs ol.akademik.itb.ac.id dan memilih mata kuliah yang akan diambil.
+•	Dosen wali melakukan tatap muka dengan mahasiswa untuk mendiskusikan pilihan mata kuliah yang diambil mahasiswa.
+•	Dosen wali memeriksa kemudian menyetujui/tidak menyetujui pilihan mahasiswa di situs ol.akademik.itb.ac.id.
+•	Jika dosen wali tidak menyetujui, mahasiswa harus mengganti pilihannya.
+•	Jika sampai batas akhir masa perwalian dosen wali belum menyetujui pilihan mahasiswa, maka kaprodi yang akan memeriksa pilihan mata kuliah mahasiswa.
