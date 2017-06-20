@@ -1,6 +1,6 @@
 Cara menggunakan:
 
-Aplikasi ini berjalan pada sistem operasi Windows
+Aplikasi ini berjalan pada sistem operasi Linux. Gunakan distro Linux Mint 18/Ubuntu 16.04
 
 Langkah-langkah untuk menjalankan:
 1. Lakukan instalasi Netbeans 8.2
