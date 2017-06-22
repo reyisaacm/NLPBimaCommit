@@ -2,6 +2,7 @@
 package nlp;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileReader;
@@ -16,6 +17,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.TargetDataLine;
 import lemurproject.indri.QueryEnvironment;
 import lemurproject.indri.indri;
 import lemurproject.indri.IndexEnvironment;
@@ -25,6 +31,7 @@ import lemurproject.indri.QueryAnnotation;
 import lemurproject.indri.QueryAnnotationNode;
 import lemurproject.indri.ScoredExtentResult;
 import lemurproject.indri.Specification;
+
 
 
 
@@ -79,7 +86,8 @@ public class NLP {
         );
         
         FilterCharacter = Arrays.asList(
-                "?"
+                "?",
+                "."
         );
         
         UnecessaryWordList = new ArrayList<String>();
@@ -122,6 +130,7 @@ public class NLP {
         String indexString ="";
         Scanner indexInput = new Scanner(System.in);
         System.out.println();
+        
         System.out.print("Rebuild Index (Y/N): ");
         indexString = indexInput.next();
         if(indexString.toLowerCase().equals("y"))
@@ -129,15 +138,80 @@ public class NLP {
             main.processIndex();
         }
         
+        
+        main.Begin();
+        
+    }
+    
+    public void Begin()
+    {
+        
         String queryString = "";
-        Scanner userInput = new Scanner(System.in);
+        
         System.out.println();
         System.out.println("CONTOH: Sebutkan langkah-langkah penerimaan mahasiswa baru magister?");
-        System.out.print("Enter query: ");
-        queryString = userInput.nextLine();
+        System.out.print("Speak your query: ");
+        //queryString = userInput.nextLine();
+        //this.GetSoundInput();
+        KaldiUtil util = new KaldiUtil();
+        queryString = util.GetSoundInText();
         
-        main.processQuery(queryString);
-       
+        Scanner userConfirm = new Scanner(System.in);
+        
+        System.out.println("Your speech text is: "+queryString);
+        System.out.print("Is this correct (y/n)?:");
+        String inp = userConfirm.nextLine();
+        
+        if(inp.toLowerCase().equals("y"))
+        {
+//            queryString="Sebutkan langkah-langkah penerimaan mahasiswa baru magister?";
+            this.processQuery(queryString);
+        }
+        else
+        {
+            this.Begin();
+        }
+    }
+    
+    public void GetSoundInput()
+    {
+        int RECORD_TIME = 6000;
+        File wavFile = new File("tmp/rec.wav");
+         
+        final SoundRecordingUtil recorder = new SoundRecordingUtil();
+         
+        // create a separate thread for recording
+        Thread recordThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    System.out.println("Start recording...");
+                    recorder.start();
+                } catch (LineUnavailableException ex) {
+                    ex.printStackTrace();
+                    System.exit(-1);
+                }              
+            }
+        });
+         
+        recordThread.start();
+         
+        try {
+            Thread.sleep(RECORD_TIME);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+         
+        try {
+            recorder.stop();
+            recorder.save(wavFile);
+            System.out.println("STOPPED");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+         
+        System.out.println("DONE");
+
         
     }
     
@@ -179,7 +253,9 @@ public class NLP {
                 String firstStageProcessResult = this.FirstStageProcessParsedDocument(result,query);
                 if(firstStageProcessResult == "")
                 {
-                    System.out.println("First Stage Query Fail");
+                    System.out.println("No match found in document sub section. Displaying whole document...");
+                    System.out.println("");
+                    System.out.println(result);
                     hasAnswer = false;
                 }
                 else

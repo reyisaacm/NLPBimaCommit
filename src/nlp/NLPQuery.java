@@ -165,21 +165,28 @@ public class NLPQuery {
     
     public String GetParsedDocumentString() {
         // get the doc text
-        String name = names[0];
-        // get the parsed document
-        int [] ids = new int[1];
-        ids[0] = docids[0];
+        String myDocText ="";
+        try{
+            int [] ids = new int[1];
+            ids[0] = docids[0];
 
-        ParsedDocument[] docs = null;
-        try {
-            docs = queryEnvironment.documents(ids);
-        } catch (Exception exc1) {
-            System.out.println(exc1.toString());
+            ParsedDocument[] docs = null;
+            try {
+                docs = queryEnvironment.documents(ids);
+            } catch (Exception exc1) {
+                System.out.println(exc1.toString());
+            }
+
+            currentParsedDoc = docs[0];
+            // use content here to skip trecweb format headers
+            myDocText = currentParsedDoc.content;
         }
-
-        currentParsedDoc = docs[0];
-        // use content here to skip trecweb format headers
-        String myDocText = currentParsedDoc.content;
+        catch(Exception ex)
+        {
+            
+        }
+        // get the parsed document
+        
         
         return myDocText;
     }

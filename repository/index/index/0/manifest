@@ -1,12 +1,12 @@
 <parameters>
-	<code-build-date>Jun 15 2010</code-build-date>
+	<code-build-date>Jun 19 2017</code-build-date>
 	<corpus>
 		<document-base>1</document-base>
 		<frequent-terms>0</frequent-terms>
-		<maximum-document>44</maximum-document>
-		<total-documents>43</total-documents>
-		<total-terms>9687</total-terms>
-		<unique-terms>982</unique-terms>
+		<maximum-document>43</maximum-document>
+		<total-documents>42</total-documents>
+		<total-terms>9672</total-terms>
+		<unique-terms>971</unique-terms>
 	</corpus>
 	<fields></fields>
 	<indri-distribution>Indri development release 2.12</indri-distribution>
