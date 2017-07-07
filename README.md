@@ -49,8 +49,8 @@ Langkah-langkah untuk menjalankan server kaldi
 	- JSON
 2. Buka terminal pada kaldi-gstreamer-server. Jalankan server dengan menggunakan:
 	- python kaldigstserver/master_server.py --port=8888
-3. Jalankan worker dengan menggunakan:
-	- export GST_PLUGIN_PATH=[absolute path ke gst-kaldi-nnet2-online/src]
+3. Buka terminal baru pada kaldi-gstreamer-server. Jalankan worker dengan menggunakan:
+	- export GST_PLUGIN_PATH=[absolute path ke kaldi/src/gst-plugin]
 	- python kaldigstserver/worker.py -u ws://localhost:8888/worker/ws/speech -c indonesia-worker-gmm.yaml
 4. Check apakah server berjalan atau tidak dengan menggunakan WebSocket client
 	- masukkan alamat ws://localhost:8080/client/ws/status
