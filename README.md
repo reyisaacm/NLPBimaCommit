@@ -59,3 +59,5 @@ Langkah-langkah untuk menjalankan:
 1. Lakukan instalasi Netbeans 8.2
 2. Pada Netbeans pilih open project, dan open project yang sudah di download/clone
 3. Tekan run pada netbeans
+
+P.S.: Aplikasi ini berjalan pada beberapa mode (Default: TEXT_INPUT) untuk mengaktifkan input dari suara ganti OperationMode pada NLPParameters.java ke FULL

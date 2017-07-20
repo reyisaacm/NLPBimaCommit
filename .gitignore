@@ -1,4 +1,5 @@
-
 kaldi-gstreamer-server/
-
 kaldi/
+build/
+tmp/
+repository/temp/

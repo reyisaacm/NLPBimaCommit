@@ -1,124 +1,23 @@
 
 package nlp;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileFilter;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.Vector;
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.TargetDataLine;
 import lemurproject.indri.QueryEnvironment;
-import lemurproject.indri.indri;
-import lemurproject.indri.IndexEnvironment;
-import lemurproject.indri.IndexStatus;
-import lemurproject.indri.ParsedDocument;
-import lemurproject.indri.QueryAnnotation;
-import lemurproject.indri.QueryAnnotationNode;
-import lemurproject.indri.ScoredExtentResult;
-import lemurproject.indri.Specification;
-
-
+import nlp.NLPParameters.OperationMode;
 
 
 public class NLP {
 
-    boolean appendIndex = false;
-    String firstStageDocPath = "./repository/temp/docs/1/";
-    String firstStageIndexPath = "./repository/temp/index/1/";
     
-    String secondStageDocPath = "./repository/temp/docs/2/";
-    String secondStageIndexPath = "./repository/temp/index/2/";
-    
-    String indexPath = "./repository/index/";
-    String filePath = "./repository/docs_txt_no_space/";
-    String docExtension ="txt";
-    private Vector dataFilesOffsetFiles=null;
-    String filterString="";
-    Integer maximumDocs = 10;
-    QueryEnvironment queryEnvironment;
-    QueryAnnotation annotationResults = null;
-    ScoredExtentResult[] scored = null;
-    Map annotations = null;
-    String [] names = null;
-    
-    QueryEnvironment queryEnvironmentTemp;
-    QueryAnnotation annotationResultsTemp = null;
-    ScoredExtentResult[] scoredTemp = null;
-    Map annotationsTemp = null;
-    String [] namesTemp = null;
-    
-    
-    List<String> QuestionWordList;
-    List<String> FilterWord;
-    List<String> FilterCharacter;
-    int [] docids = null;
-    ParsedDocument currentParsedDoc = null;
-    List<String> UnecessaryWordList;
-    List<String> SubMarkList;
+    NLPParameters param;
+    String storedQuestionWord=null;
+   
     
     public NLP()
     {
-        QuestionWordList = Arrays.asList(
-                "Bagaimana",
-                "Mengapa",
-                "Apa",
-                "Sebutkan",
-                "Kapan",
-                "Di mana",
-                "Dimana",
-                "Siapa",
-                "Apa Saja"
-        );
-        
-        FilterCharacter = Arrays.asList(
-                "?",
-                "."
-        );
-        
-        UnecessaryWordList = new ArrayList<String>();
-        
-        SubMarkList = Arrays.asList(
-                "a.\t",
-                "b.\t",
-                "c.\t",
-                "d.\t",
-                "e.\t",
-                "f.\t",
-                "g.\t",
-                "h.\t",
-                "i.\t",
-                "j.\t",
-                "k.\t",
-                "l.\t",
-                "m.\t",
-                "n.\t",
-                "o.\t",
-                "p.\t",
-                "q.\t",
-                "r.\t",
-                "s.\t",
-                "t.\t",
-                "v.\t",
-                "w.\t",
-                "x.\t",
-                "y.\t",
-                "z.\t"
-        );
+        param = new NLPParameters();
     }
     /**
      * @param args the command line arguments
@@ -145,38 +44,51 @@ public class NLP {
     
     public void Begin()
     {
-        
         String queryString = "";
-        
+
         System.out.println();
-        System.out.println("CONTOH: Sebutkan langkah-langkah penerimaan mahasiswa baru magister?");
-        System.out.print("Speak your query: ");
-        //queryString = userInput.nextLine();
-        //this.GetSoundInput();
-        KaldiUtil util = new KaldiUtil();
-        queryString = util.GetSoundInText();
+        System.out.println(param.exampleText);
         
-        Scanner userConfirm = new Scanner(System.in);
-        
-        System.out.println("Your speech text is: "+queryString);
-        System.out.print("Is this correct (y/n)?:");
-        String inp = userConfirm.nextLine();
-        
-        if(inp.toLowerCase().equals("y"))
+        if(param.operationMode == OperationMode.FULL.toString() || param.operationMode == OperationMode.SOUNDINPUT.toString())
         {
-//            queryString="Sebutkan langkah-langkah penerimaan mahasiswa baru magister?";
+            System.out.print(param.soundInputText);
+            this.GetSoundInput();
+            KaldiUtil util = new KaldiUtil();
+            queryString = util.GetSoundInText();
+            Scanner userConfirm = new Scanner(System.in);
+        
+            System.out.println(param.soundInputConfirmText+queryString);
+            System.out.print(param.soundInputConfirmText2);
+            String inp = userConfirm.nextLine();
+
+            if(inp.toLowerCase().equals("y"))
+            {
+    //            queryString="Sebutkan langkah-langkah penerimaan mahasiswa baru magister?";
+                this.processQuery(queryString);
+            }
+            else
+            {
+                this.Begin();
+            }
+        }
+        else if(param.operationMode == OperationMode.TEXTINPUT.toString() || param.operationMode == OperationMode.TEXTINPUT_SOUNDOUTPUT.toString())
+        {
+            Scanner userInput= new Scanner(System.in);
+
+            System.out.print(param.textInputText);
+            queryString = userInput.nextLine();
             this.processQuery(queryString);
+
         }
-        else
-        {
-            this.Begin();
-        }
+        
+       
+        
+        
     }
     
     public void GetSoundInput()
     {
-        int RECORD_TIME = 6000;
-        File wavFile = new File("tmp/rec.wav");
+        File wavFile = new File(param.recordPath);
          
         final SoundRecordingUtil recorder = new SoundRecordingUtil();
          
@@ -197,7 +109,7 @@ public class NLP {
         recordThread.start();
          
         try {
-            Thread.sleep(RECORD_TIME);
+            Thread.sleep(param.RECORD_TIME);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -217,7 +129,7 @@ public class NLP {
     
     public void processIndex()
     {
-         NLPIndex index = new NLPIndex(indexPath, docExtension, appendIndex, filePath);
+         NLPIndex index = new NLPIndex(param.indexPath, param.docExtension, param.appendIndex, param.filePath);
          index.BuildIndex();
     }
     
@@ -230,10 +142,10 @@ public class NLP {
         
         
         boolean suppressQueryResult = false;    
-        NLPQuery q = new NLPQuery(env, maximumDocs,indexPath,suppressQueryResult);
+        NLPQuery q = new NLPQuery(env, param.maximumDocs,param.indexPath,suppressQueryResult);
         
         
-        isIndexOpen = q.OpenIndex(indexPath);
+        isIndexOpen = q.OpenIndex(param.indexPath);
         if(isIndexOpen)
         {
             //query = "Sebutkan langkah-langkah penerimaan mahasiswa baru magister?";
@@ -250,7 +162,7 @@ public class NLP {
             }
             else
             {
-                String firstStageProcessResult = this.FirstStageProcessParsedDocument(result,query);
+                String firstStageProcessResult = new NLPFirstStage().GetResult(result,query);
                 if(firstStageProcessResult == "")
                 {
                     System.out.println("No match found in document sub section. Displaying whole document...");
@@ -260,7 +172,7 @@ public class NLP {
                 }
                 else
                 {
-                    String secondStageProcessResult = this.SecondStageProcessParsedDocument(result, firstStageProcessResult);
+                    String secondStageProcessResult = new NLPSecondStage().GetResult(result, firstStageProcessResult);
                     if(secondStageProcessResult == "")
                     {
                         System.out.println("Second Stage Query Fail");
@@ -268,7 +180,17 @@ public class NLP {
                     }
                     else
                     {
-                        finalResult = secondStageProcessResult;
+                        String thirdStageProcessResult = new NLPThirdStage().GetResult(query, secondStageProcessResult, storedQuestionWord);
+                        if(thirdStageProcessResult == "")
+                        {
+                            System.out.println("Third Stage Query Fail");
+                            hasAnswer = false;
+                        }
+                        else
+                        {
+                            finalResult = thirdStageProcessResult;
+                        }
+                        
                     }
                 }
             }
@@ -291,21 +213,20 @@ public class NLP {
         
     }
     
-  
-    
     public String ParseQuery(String query)
     {
        //Remove question word
-       for(String s:QuestionWordList)
+       for(String s:param.QuestionWordList)
        {
-           if(query.indexOf(s)>=0)
+           if(NLPUtil.ContainExactWord(query.toLowerCase(), s.toLowerCase()))
            {
+               storedQuestionWord = s;
                query = NLPUtil.ReplaceWholeWordsWithEmptyString(s, query);
            }
        }
        
        //Remove useless character
-       for(String s:FilterCharacter)
+       for(String s:param.FilterCharacter)
        {
            if(query.indexOf(s) >=0)
            {
@@ -314,7 +235,7 @@ public class NLP {
        }
        
        //Remove unecessary word
-       for(String s:UnecessaryWordList)
+       for(String s:param.UnecessaryWordList)
        {
            if(query.indexOf(s)>=0)
            {
@@ -324,159 +245,5 @@ public class NLP {
        
        return query;
     }
- 
-    public void CreateTextFile(String input, int sequenceNumber, String path) {
-        BufferedWriter bufferedWriter = null;
-        try {
-            File absPath = new File(path);
-            File myFile = new File(absPath.getAbsolutePath()+"/"+sequenceNumber+".txt");
-            // check if file exist, otherwise create the file before writing
-            if (!myFile.exists()) {
-                myFile.createNewFile();
-            }
-            Writer writer = new FileWriter(myFile);
-            bufferedWriter = new BufferedWriter(writer);
-            bufferedWriter.write(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally{
-            try{
-                if(bufferedWriter != null) bufferedWriter.close();
-            } catch(Exception ex){
-                
-            }
-        }
-    }
-    
-    public void SplitParsedDocument(String source, int stage)
-    {
-        String processSource = source;
-        int i;
-        switch(stage)
-        {
-            case 1:
-                i=-1;
-                for(String s : SubMarkList)
-                {
-                    Integer startIndex = source.indexOf(s);
-                    i++;
-                    if(startIndex >=0)
-                    {
-                        int count = SubMarkList.size();
-                        Integer endIndex = 0;
-                        if(count >= (i+1))
-                        {
-                            String a = SubMarkList.get(i+1);
-                            endIndex = source.indexOf(a);
-                            if(endIndex == -1)
-                            {
-                                endIndex = source.length()-1;
-                            }
-                        }
-                        else
-                        {
-                            endIndex = source.length()-1;
-                        }
-                        processSource = source;
-                        processSource = processSource.substring(startIndex,endIndex);
-                        
-                        String[] subTitleOnly = processSource.split("\n");
-                        
-                        
-                        CreateTextFile(subTitleOnly[0],i,firstStageDocPath);
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-                } 
-                break;
-                
-                case 2:
-            i=-1;
-            for(String s : SubMarkList)
-            {
-                Integer startIndex = source.indexOf(s);
-                i++;
-                if(startIndex >=0)
-                {
-                    int count = SubMarkList.size();
-                    Integer endIndex = 0;
-                    if(count >= (i+1))
-                    {
-                        String a = SubMarkList.get(i+1);
-                        endIndex = source.indexOf(a);
-                        if(endIndex == -1)
-                        {
-                            endIndex = source.length()-1;
-                        }
-                    }
-                    else
-                    {
-                        endIndex = source.length()-1;
-                    }
-                    processSource = source;
-                    processSource = processSource.substring(startIndex,endIndex);
-                    CreateTextFile(processSource,i,secondStageDocPath);
-                }
-                else
-                {
-                    break;
-                }
-
-            }  
-            break;
-        }
-        
-        
-    }
-    
-    public String FirstStageProcessParsedDocument(String source, String query)
-    {   
-        this.SplitParsedDocument(source,1);
-
-        NLPIndex index= new NLPIndex(firstStageIndexPath, docExtension, appendIndex, firstStageDocPath);
-        index.BuildIndex();
-        
-        QueryEnvironment env = new QueryEnvironment();
-        boolean suppressQueryResult = true;
-        NLPQuery q = new NLPQuery(env, maximumDocs, firstStageIndexPath,suppressQueryResult);
-        String result = q.GetResult(query,true);
-        
-        //fallback to modern search if tfidf failed to find records
-        if(result =="")
-        {
-            result = q.GetResult(query);
-        }
-        
-        return result;
-    }
-    
-    public String SecondStageProcessParsedDocument(String source, String query)
-    {   
-        this.SplitParsedDocument(source,2);
-
-        NLPIndex index= new NLPIndex(secondStageIndexPath, docExtension, appendIndex, secondStageDocPath);
-        index.BuildIndex();
-        
-        QueryEnvironment env = new QueryEnvironment();
-        boolean suppressQueryResult = true;
-        NLPQuery q = new NLPQuery(env, maximumDocs, secondStageIndexPath,suppressQueryResult);
-        String result = q.GetResult(query,true);
-        
-        //fallback to modern search if tfidf failed to find records
-        if(result =="")
-        {
-            result = q.GetResult(query);
-        }
-        
-        if(result != "")
-        {
-           result = result.substring(result.indexOf('\n')+1);
-        }
-        
-        return result;
-    }
-     
+   
 }
