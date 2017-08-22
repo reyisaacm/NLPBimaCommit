@@ -1,0 +1,23 @@
+D.3.	Prosedur Pembuatan Data Kemajuan Studi
+a.	Uraian Singkat
+Prosedur pembuatan data kemajuan studi merupakan rangkaian kegiatan untuk memberikan nilai kemajuan studi mahasiswa per semester.
+
+b.	Penanggung Jawab Prosedur
+•	TU Akademik
+
+c.	Tujuan
+Menginformasikan kepada mahasiswa mengenai nilai-nilai mata kuliah yang diperoleh per semester.
+	
+d.	Kriteria dan Standar
+•	Daftar nilai yang diperoleh per semester
+
+e.	Formulir
+•	DKS-01 Form Permintaan Data Kemajuan Studi
+
+f.	Langkah-langkah pelaksanaan
+•	Mahasiswa mengisi formulir permintaan data kemajuan studi di TU akademik dan menyerahkan ke TU akademik,
+•	TU akademik memeriksa formulir isian, melihat data kemajuan studi mahasiswa pada website ol.akademik.itb.ac.id.
+•	TU akademik men-download (dalam bentuk PDF) dan mencetak data kemajuan studi mahasiswa, 
+•	Kaprodi memeriksa dan memberikan tanda tangan pada data kemajuan studi mahasiswa, 
+•	TU akademik menyerahkan kepada mahasiswa untuk diperbanyak dan diberi cap fakultas sesuai kebutuhan, dan
+•	Transkrip yang telah dicap diserahkan kembali kepada mahasiswa

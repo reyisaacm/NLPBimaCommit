@@ -3,3 +3,8 @@ kaldi/
 build/
 tmp/
 repository/temp/
+Natural Language Processing/
+/GUI/NLPGUI/nbproject/private/
+/main/nbproject/private/
+/GUI/NLPGUI/dist/
+/main/dist/

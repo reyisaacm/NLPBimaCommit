@@ -1,0 +1,14 @@
+kaldi-gstreamer-server/
+kaldi/
+build/
+tmp/
+repository/temp/
+<<<<<<< HEAD
+Natural Language Processing/
+=======
+/nlpgui/nbproject/private/
+/GUI/NLPGUI/nbproject/private/
+/main/nbproject/private/
+/GUI/NLPGUI/dist/
+/main/dist/
+>>>>>>> master

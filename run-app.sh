@@ -1,0 +1,1 @@
+java -Djava.library.path="main/lib/" -jar GUI/NLPGUI/dist/NLPGUI.jar 

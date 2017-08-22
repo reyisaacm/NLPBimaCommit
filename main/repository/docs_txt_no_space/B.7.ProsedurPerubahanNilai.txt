@@ -1,0 +1,23 @@
+B.7.	Prosedur Perubahan Nilai 
+a.	Uraian Singkat
+Prosedur perubahan nilai (PN) adalah prosedur yang memperbaiki nilai-nilai yang sebelumnya telah dimiliki oleh seorang mahasiswa.
+b.	Penanggung Jawab Prosedur
+Program Studi (Prodi)
+c.	Tujuan
+Mengatur jalannya proses perbaikan nilai sehingga tidak melanggar aturan yang telah ditetapkan.
+d.	Kriteria dan Standar
+•	DNA untuk matakuliah yang nilainya akan diperbaiki statusnya harus sudah diverifikasi.
+•	Nilai perbaikan yang dicantumkan dalam formulir PN harus A/B/C/D/E atau P/F dan tidak boleh T atau kosong.
+•	Perbaikan nilai hanya boleh dilakukan satu kali, pada saat periode perbaikan nilai dibuka.
+•	Perbaikan nilai hanya boleh dilakukan sebelum batas waktu perbaikan nilai.
+
+e.	Form
+Daftar perubahan nilai (DPN)
+f.	Langkah-langkah Pelaksanaan
+•	Adanya nilai yang akan diperbaiki.
+•	Dosen memberikan tugas atau ujian khusus kepada mahasiswa yang nilainya akan diperbaiki.
+•	Mahasiswa mengerjakan/mengikuti tugas/ujian yang diberikan oleh dosen matakuliah tersebut.
+•	Dosen mengeluarkan nilai baru hasil dari tugas/ujian yang telah dikerjakan mahasiswa.
+•	TU prodi menerima perubahan nilai dari dosen dan melakukan entry nilai tersebut, kemudian mencetak berita acara perbaikan nilai.
+•	Dosen matakuliah menandatangani berita acara perbaikan nilai.
+•	Kasubag akademik dan kemahasiswaan menerima berita acara perbaikan nilai, merekap, dan menyampaikannya ke ditdik.

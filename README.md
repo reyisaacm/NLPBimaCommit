@@ -1,3 +1,11 @@
+UPDATE 2017-08
+Aplikasi sekarang memiliki GUI
+Step-step untuk menjalankan aplikasi
+1. Jalankan kaldi server
+2. Jalankan kaldi worker
+3. Jalankan run-app.sh, jika terdapat permission denied, gunakan chmod +x pada run-app.sh
+
+=====================================
 Cara menggunakan:
 
 Aplikasi ini berjalan pada sistem operasi Linux. Gunakan distro Linux Mint 18/Ubuntu 16.04
