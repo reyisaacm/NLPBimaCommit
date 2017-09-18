@@ -11,10 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- *
- * @author reynhart
- */
 public class NLPGUI extends Application {
     
     @Override

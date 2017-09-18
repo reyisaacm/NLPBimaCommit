@@ -26,6 +26,7 @@ public class NLPQuery {
       Integer maximumDocs;
       String indexPath;
       boolean suppressQueryResult;
+      String rankingResults = "";
     
       public NLPQuery(QueryEnvironment queryEnvironment, Integer maximumDocs, String indexPath, boolean suppressQueryResult)
       {
@@ -35,15 +36,21 @@ public class NLPQuery {
           this.suppressQueryResult = suppressQueryResult;
       }
       
-      public String GetResult(String query,boolean isLegacy)
+      public String GetRankingResults()
+      {
+          return rankingResults;
+      }
+      
+      public String GetResult(String query,boolean isLegacy, int stage)
       {
           
           String result = "";
 //          this.OpenIndex(indexPath);
 //          result = RunQuestion(query);
-
+            suppressQueryResult = false;
             NLPQueryLt qt = new NLPQueryLt(query, indexPath,maximumDocs,suppressQueryResult);
-            result = qt.GetResult();
+            result = qt.GetResult(stage);
+            rankingResults = qt.GetRankingResults();
             
           return result;
       }
@@ -147,8 +154,10 @@ public class NLPQuery {
             {
                 File f = new File(names[i]);
 
-                System.out.print(f.getName() + " ");
-                System.out.println(s.score);
+                rankingResults += f.getName() + " " + s.score + " \r\n";
+                
+//                System.out.print(f.getName() + " ");
+//                System.out.println(s.score);
                 i++;
             }
 

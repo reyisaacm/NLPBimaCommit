@@ -11,9 +11,16 @@ import java.util.List;
 
 public class NLPThirdStage {
     
+    String rankingResults="";
+    
+    public String GetRankingResults()
+    {
+        return rankingResults;
+    }
     
     public String GetResult(String source, String query, String storedQuestionWord)
     {
+        rankingResults += "Query Results for stage 3: \r\n";
         return this.Process(source, query,storedQuestionWord);
     }
     
@@ -47,6 +54,14 @@ public class NLPThirdStage {
     
     private String ProcessAnswerAfterAndBefore(String source, String query, boolean isAfter)
     {
+        if(isAfter)
+        {
+            rankingResults += "Detected query question type is 'After' \r\n";
+        }
+        else
+        {
+            rankingResults = "Detected query question type is 'Before' \r\n";
+        }
         String result = "";
         
         String lineDelimiter = "•";
@@ -75,6 +90,7 @@ public class NLPThirdStage {
             {
                 scoreList.add(100.0);
                 wordList.add(s);
+                rankingResults += "--> "+s.trim()+" "+100+"\r\n";
             }
             else
             {
@@ -83,15 +99,27 @@ public class NLPThirdStage {
                 int length = splitQueryTemp.length;
                 for(String a:lst)
                 {
-                    if(NLPUtil.ContainExactWord(source, a))
+                    if(!a.equals(""))
                     {
-                        score++;
+                        if(NLPUtil.ContainExactWord(source, a))
+                        {
+                            score++;
+                        }
                     }
+                   
                 }
                 double finalScore = ((double)score/(double)length) * 100.0;
-                scoreList.add(finalScore);
-                wordList.add(s);
+                
+                if(!s.equals(""))
+                {
+                    scoreList.add(finalScore);
+                    wordList.add(s);
+                    rankingResults += "--> "+s.trim()+" "+finalScore+"\r\n";
+                }
+                
+                
             }
+            
                
         }
         
@@ -153,6 +181,7 @@ public class NLPThirdStage {
     
     private String ProcessAnswerYesOrNo(String source, String query)
     {
+        rankingResults += "Detected query question type is 'Yes or No' \r\n";
         String result = "";
         double THRESHOLD_ANSWER_YES_OR_NO = 50;
         
@@ -176,6 +205,8 @@ public class NLPThirdStage {
         }
         
         double finalScore = ((double)score/(double)length) * 100.0;
+        rankingResults += "Score: "+finalScore+"\r\n";
+
         
         if(finalScore >= THRESHOLD_ANSWER_YES_OR_NO)
         {

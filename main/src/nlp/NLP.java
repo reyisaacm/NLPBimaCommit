@@ -6,6 +6,7 @@ import java.util.Scanner;
 import javax.sound.sampled.LineUnavailableException;
 import lemurproject.indri.QueryEnvironment;
 import nlp.NLPParameters.OperationMode;
+import static nlp.NLPUtil.deleteFilesInDirectory;
 
 
 public class NLP {
@@ -14,15 +15,23 @@ public class NLP {
     NLPParameters param;
     String storedQuestionWord=null;
     String exportedResult ="";
+    String exportedRanking = "";
     
     public NLP()
     {
         param = new NLPParameters();
+        deleteFilesInDirectory(new File(param.firstStageDocPath));
+        deleteFilesInDirectory(new File(param.secondStageDocPath));
     }
     
     public String ExportResult()
     {
         return exportedResult;
+    }
+    
+    public String ExportRanking()
+    {
+        return exportedRanking;
     }
     /**
      * @param args the command line arguments
@@ -156,7 +165,6 @@ public class NLP {
         boolean suppressQueryResult = false;    
         NLPQuery q = new NLPQuery(env, param.maximumDocs,param.indexPath,suppressQueryResult);
         
-        
         isIndexOpen = q.OpenIndex(param.indexPath);
         if(isIndexOpen)
         {
@@ -166,7 +174,9 @@ public class NLP {
             String finalResult="";
             boolean hasAnswer = true;
             
-            String result = q.GetResult(query,true);
+            String result = q.GetResult(query,true,0);
+            exportedRanking += q.GetRankingResults();
+
             if(result == "")
             {
                 System.out.println(ExportResult("No results"));
@@ -174,7 +184,10 @@ public class NLP {
             }
             else
             {
-                String firstStageProcessResult = new NLPFirstStage().GetResult(result,query);
+                NLPFirstStage st1 = new NLPFirstStage();
+                String firstStageProcessResult = st1.GetResult(result,query);
+                
+
                 if(firstStageProcessResult == "")
                 {
                     System.out.println(ExportResult("No match found in document sub section. Displaying whole document..."));
@@ -184,7 +197,9 @@ public class NLP {
                 }
                 else
                 {
-                    String secondStageProcessResult = new NLPSecondStage().GetResult(result, firstStageProcessResult);
+                    exportedRanking += st1.GetRankingResults();
+                    NLPSecondStage st2 =new NLPSecondStage();
+                    String secondStageProcessResult = st2.GetResult(result, firstStageProcessResult);
                     if(secondStageProcessResult == "")
                     {
                         System.out.println(ExportResult("Second Stage Query Fail"));
@@ -192,7 +207,9 @@ public class NLP {
                     }
                     else
                     {
-                        String thirdStageProcessResult = new NLPThirdStage().GetResult(query, secondStageProcessResult, storedQuestionWord);
+                        exportedRanking += st2.GetRankingResults();
+                        NLPThirdStage st3 = new NLPThirdStage();
+                        String thirdStageProcessResult = st3.GetResult(query, secondStageProcessResult, storedQuestionWord);
                         if(thirdStageProcessResult == "")
                         {
                             System.out.println(ExportResult("Third Stage Query Fail"));
@@ -200,6 +217,7 @@ public class NLP {
                         }
                         else
                         {
+                            exportedRanking += st3.GetRankingResults();
                             finalResult = thirdStageProcessResult;
                         }
                         
@@ -212,6 +230,7 @@ public class NLP {
             if(hasAnswer)
             {
                 System.out.println();
+                System.out.println("Exported Ranking:"+exportedRanking);
                 System.out.println(ExportResult("The answer to your query: "));
                 System.out.println(ExportResult(finalResult));
             }

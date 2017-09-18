@@ -29,6 +29,16 @@ public class NLPUtil {
         dir.delete();
     }
     
+    public static void deleteFilesInDirectory(File dir) {
+	File [] files = dir.listFiles();
+	for (int i = 0; i < files.length; i++) {
+	    File f = files[i];
+	    if (f.isDirectory())
+		deleteDirectory(f);
+	    f.delete();
+	}
+    }
+    
     public static String encodeRegexp(String regexp) {
 	// rewrite shell fname pattern to regexp.
 	// * -> .*
@@ -56,7 +66,10 @@ public class NLPUtil {
         BufferedWriter bufferedWriter = null;
         try {
             File absPath = new File(path);
-            File myFile = new File(absPath.getAbsolutePath()+"/"+sequenceNumber+".txt");
+//            File myFile = new File(absPath.getAbsolutePath()+"/"+sequenceNumber+".txt");
+            String temp = input.trim().replaceAll("\\s","");
+            String fileName=temp.substring(0, Math.min(25, temp.length()));;
+            File myFile = new File(absPath.getAbsolutePath()+"/"+fileName+".txt");
             // check if file exist, otherwise create the file before writing
             if (!myFile.exists()) {
                 myFile.createNewFile();

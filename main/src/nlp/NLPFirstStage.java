@@ -11,6 +11,12 @@ import lemurproject.indri.QueryEnvironment;
 public class NLPFirstStage {
     public String Result;
     NLPParameters param;
+    String rankingResults ="";
+    
+    public String GetRankingResults()
+    {
+        return rankingResults;
+    }
     
     public String GetResult(String input, String query)
     {
@@ -28,13 +34,13 @@ public class NLPFirstStage {
         QueryEnvironment env = new QueryEnvironment();
         boolean suppressQueryResult = true;
         NLPQuery q = new NLPQuery(env, param.maximumDocs, param.firstStageIndexPath,suppressQueryResult);
-        String result = q.GetResult(query,true);
-        
+        String result = q.GetResult(query,true,1);
+        rankingResults += q.GetRankingResults();
         //fallback to modern search if tfidf failed to find records
-        if(result =="")
-        {
-            result = q.GetResult(query);
-        }
+//        if(result =="")
+//        {
+//            result = q.GetResult(query);
+//        }
         
         return result;
     }

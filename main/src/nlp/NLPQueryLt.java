@@ -44,6 +44,12 @@ public class NLPQueryLt {
     ParsedDocument currentParsedDoc = null;
     boolean hasResult;
     boolean suppressQueryResult;
+    String rankingResults="";
+    
+    public String GetRankingResults()
+    {
+          return rankingResults;
+    }
     
     public NLPQueryLt(String searchQuery, String indexPath, Integer maximumDocs,boolean suppressQueryResult)
     {
@@ -55,14 +61,14 @@ public class NLPQueryLt {
         this.suppressQueryResult = suppressQueryResult;
     }
     
-    public String GetResult()
+    public String GetResult(int stage)
     {
         
         this.SendQuery(searchQuery);
         
         if(hasResult)
         {
-            return this.printQueryResult();
+            return this.printQueryResult(stage);
         }
         else
         {
@@ -165,22 +171,29 @@ public class NLPQueryLt {
         return collection;
     }
     
-    public String printQueryResult()
+    public String printQueryResult(int stage)
     {
         if(!suppressQueryResult)
         {
-            System.out.println("Query Results: ");
+//            System.out.println("Query Results: ");
+            rankingResults += "Query Results for stage "+stage+":\r\n";
+            if(stage ==2)
+            {
+                rankingResults += "Fetching contents of the following document:\r\n";
+            }
             int i =0;
             for(ScoredExtentResult s : data)
             {
                 File f = new File(names[i]);
+                
+                rankingResults += f.getName() + " " + s.score + " \r\n";
 
-                System.out.print(f.getName() + " ");
-                System.out.println(s.score);
+//                System.out.print(f.getName() + " ");
+//                System.out.println(s.score);
                 i++;
             }
         
-            System.out.println();
+            rankingResults +="\r\n";
         }
         
 //        System.out.println("Content: ");
