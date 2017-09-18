@@ -25,6 +25,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
@@ -52,6 +53,9 @@ public class FXMLDocumentController implements Initializable {
     private TextArea outputArea;
     
     @FXML
+    private Button startButton;
+    
+    @FXML
     private TextArea rankingArea;
     
     @FXML
@@ -61,6 +65,8 @@ public class FXMLDocumentController implements Initializable {
 //        label.setText("Hello World!");
         outputAreaText="";
         outputArea.setText(outputAreaText);
+        rankingArea.setText("");
+
         Alert alert = new Alert(AlertType.NONE, "Press OK to start recording sound", ButtonType.OK, ButtonType.CANCEL);
         alert.showAndWait();
         app = new NLP();
@@ -78,6 +84,7 @@ public class FXMLDocumentController implements Initializable {
     {
         outputAreaText="";
         outputArea.setText(outputAreaText);
+        rankingArea.setText("");
         //            Dialog soundRecording = new Dialog();
 //            soundRecording.getDialogPane().ge
 //            soundRecording.showAndWait();
@@ -141,9 +148,11 @@ public class FXMLDocumentController implements Initializable {
          Thread t = new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        startButton.setDisable(true);
                         SetOutputText("Processing sound...");
                         KaldiUtil util = new KaldiUtil();
                         String queryString = util.GetSoundInText();
+                        startButton.setDisable(false);
                         ProcessSoundStage3(queryString);
                     }
            });

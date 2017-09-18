@@ -20,12 +20,12 @@ public class NLPThirdStage {
     
     public String GetResult(String source, String query, String storedQuestionWord)
     {
-        rankingResults += "Query Results for stage 3: \r\n";
         return this.Process(source, query,storedQuestionWord);
     }
     
     private String Process(String source, String query, String storedQuestionWord)
     {
+        rankingResults += "Query Results for stage 3: \r\n";
         String result="";
         //System.out.println(storedQuestionWord);
         if(storedQuestionWord != null)
